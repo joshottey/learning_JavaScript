@@ -24,10 +24,8 @@ function fairSquare(array) {
   var fairSquares = [];
   for(var i=0;i<array.length;i++) {
     var asStr = array[i].toString();
-    if(Math.sqrt(array[i]) % 1 === 0) {
-      if(reverse(asStr)) {
-        fairSquares.push(array[i]);
-      }
+    if(Math.sqrt(array[i]) % 1 === 0 && reverse(asStr)) {
+      fairSquares.push(array[i]);
     }
   }
   return fairSquares;
